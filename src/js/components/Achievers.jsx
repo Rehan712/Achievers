@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 
 import FirstHeading from './FirstHeading'
-import SecondPart2 from './SecondPart2';
-import {Achieversdata} from './data'
+import Portion1 from './Portion1'
+import Portion2 from './Portion2'
+import {achieversData} from './data'
 
 
  class Achievers extends React.Component {
@@ -18,26 +19,17 @@ import {Achieversdata} from './data'
 		
 		return (
 			<div className="achievers">
-			<div className="box1"></div>
 				<FirstHeading 
-					heading={Achieversdata.firstPart.heading}
-					text={Achieversdata.firstPart.text}
+					heading={achieversData.firstPart.heading}
+					text={achieversData.firstPart.text}
+				/>
+				<Portion1 
+					achieversData={achieversData}
+				/>
+				<Portion2 
+					achieversData={achieversData}
 				/>
 				<div className="clear"></div>
-
-				<SecondPart2
-				 Achieversdata={Achieversdata}
-				 firstNo={3} 
-				 secondNo={5} 
-				 heading={'Class of 2017'} 
-				/>
-				<SecondPart2 
-				 Achieversdata={Achieversdata} 
-				 firstNo={2} 
-				 secondNo={3} 
-				 heading={'Class of 2016'}
-				/>
-				
 			</div>
 		)
 	}
